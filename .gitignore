@@ -1,0 +1,7 @@
+# Unnecessary IDE/Editor stuff.
+# If you use a different editor, add it here. 
+# I will not accept any push requests that includes Editor or IDE specific files.
+.vscode/
+
+# Node modules shouldn't be included in the repo.
+node_modules/

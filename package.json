@@ -1,0 +1,20 @@
+{
+  "name": "charty",
+  "version": "1.0.0",
+  "description": "A declarative chart library for modern browsers",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node scripts/build.js"
+  },
+  "keywords": [
+    "Charts"
+  ],
+  "author": "Alexander Schramm",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "tsify": "^3.0.1",
+    "typescript": "^2.4.2"
+  }
+}
