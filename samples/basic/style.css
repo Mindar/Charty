@@ -1,0 +1,17 @@
+body {
+    font-family: 'Helvetica', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.code-block {
+    font-family: 'Consolas', monospace;
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    display:inline-block;
+}
+
+charty-linechart {
+    display: block;
+    height: 490px;
+    width: 600px;
+}
