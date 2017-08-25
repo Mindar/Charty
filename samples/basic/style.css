@@ -17,6 +17,12 @@ figure {
     display:block;
 }
 
+.styledchart {
+    --charty-axis-color: #f00;
+    height: 400px;
+    width: 400px;
+}
+
 charty-pointchart {
     height: 400px;
 }

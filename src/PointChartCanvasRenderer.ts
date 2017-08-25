@@ -30,6 +30,8 @@ export default class PointChartCanvasRenderer {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
         // draw coordinate system
+        let axiscolor = window.getComputedStyle(this.host).getPropertyValue('--charty-axis-color').trim();
+        this.coordSystem.axiscol = axiscolor;
         this.coordSystem.draw();
 
         // if there is data, draw the data too

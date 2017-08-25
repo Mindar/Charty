@@ -1,4 +1,5 @@
 export default interface ICoordinateSystem {
+    axiscol : string;
     draw() : void;
     rescale(data : any) : void;
 

@@ -7,6 +7,15 @@ export default class LinLinCoordinateSystem implements ICoordinateSystem{
     private yMax : number;
     private xDivisions : number;
     private yDivisions : number;
+    private axisColor : string;
+
+    public set axiscol(color : string){
+        this.axisColor = color;
+    }
+
+    public get axiscol(){
+        return this.axisColor;
+    }
 
     private ctx : CanvasRenderingContext2D;
 
@@ -21,7 +30,8 @@ export default class LinLinCoordinateSystem implements ICoordinateSystem{
         let yAxisXPos = Math.round(this.getX({x: 0})) + 0.5;
 
         const ctx = this.ctx;
-        ctx.strokeStyle = '#000';
+
+        ctx.strokeStyle = this.axisColor;
 
         // If the x axis would be drawn outside the canvas, we draw it at the bottom
         if((xAxisYPos < ctx.canvas.height) && (xAxisYPos > 0)) {

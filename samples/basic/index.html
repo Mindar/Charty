@@ -47,12 +47,30 @@
             <figure>
                     <h3>Title!</h3>
                     <charty-pointchart src="data.csv"></charty-pointchart>
-                    <figcaption>Figure 1.01: description for this chart</figcaption>
+                    <figcaption>Figure 1: description for this chart</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Style!</h2>
+            <p>
+                So far our charts are pretty nice, but we might want to style them to better fit the rest of the webpage. Doing that is actually pretty simple and no different than styling any other HTMLElement. Charty charts are displayed as 'block' by default. You can change this in css by simply applying a style to the chart. Let's change the chart's height, width and the color of its axis with some simple css. As you can see Charty uses some custom css Properties:
+            </p>
+            <p class="code-block">
+                charty-pointchart {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;--charty-axis-color: #f00;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;height: 400px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;width: 400px;<br>
+                }
+            </p>
+            <figure>
+                    <h3>A styled Chart!</h3>
+                    <charty-pointchart src="data.csv" class="styledchart"></charty-pointchart>
+                    <figcaption>Figure 2: This chart has been styled by css.</figcaption>
             </figure>
         </section>
         <footer>
             <p>
-                As you see, using Charty for static charts is really simple. But Charty can easily handle more complex scenarios such as <a href="#">interactive charts</a>, or <a href="#">charts that display streaming data</a>. Follow the links to find out how to use Charty for that.
+                As you see, using Charty for static charts is really simple. But Charty can easily handle more complex scenarios such as <a href="#">interactive charts (not yet done)</a>, or <a href="#">charts that display streaming data (not yet done)</a>. Follow the links to find out how to use Charty for that.
             </p>
         </footer>
     </body>

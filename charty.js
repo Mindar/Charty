@@ -232,6 +232,12 @@ exports.default = CsvLoader;
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class LinLinCoordinateSystem {
+    set axiscol(color) {
+        this.axisColor = color;
+    }
+    get axiscol() {
+        return this.axisColor;
+    }
     constructor(context) {
         this.ctx = context;
         this.rescale();
@@ -241,7 +247,7 @@ class LinLinCoordinateSystem {
         let xAxisYPos = Math.round(this.getY({ y: 0 })) + 0.5;
         let yAxisXPos = Math.round(this.getX({ x: 0 })) + 0.5;
         const ctx = this.ctx;
-        ctx.strokeStyle = '#000';
+        ctx.strokeStyle = this.axisColor;
         // If the x axis would be drawn outside the canvas, we draw it at the bottom
         if ((xAxisYPos < ctx.canvas.height) && (xAxisYPos > 0)) {
             // Draw it in the canvas
@@ -489,6 +495,8 @@ class PointChartCanvasRenderer {
     draw(data = null) {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         // draw coordinate system
+        let axiscolor = window.getComputedStyle(this.host).getPropertyValue('--charty-axis-color').trim();
+        this.coordSystem.axiscol = axiscolor;
         this.coordSystem.draw();
         // if there is data, draw the data too
         if (data) {
