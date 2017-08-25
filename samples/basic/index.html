@@ -7,11 +7,53 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <p>All the code you need for this simple demo:</p>
-        <p class="code-block">
-            &lt;script src="charty.js" type="text/javascript" async&gt;&lt;/script&gt;<br>
-            &lt;charty-linechart src="data.csv"&gt;Diagrams Yay!&lt;/charty-linechart&gt;
-        </p>
-        <charty-linechart src="data.csv" id="chartychart">Diagrams Yay!</charty-linechart>
+        <header>
+            <h1>Basic Charty Examples</h1>
+            <p>
+                This page demonstrates the usage of Charty with some basic examples. Charty can do much more complicated things, but if all you want to do is add a chart to a site this page is all you'll need to read.
+            </p>
+        </header>
+        <section>
+            <h2>Barebones Example</h2>
+            <p>
+                Before we can add charty elements to our html we need to add the Charty.js file to our html page. It is recommended that you do this asynchronously so that it doesn't block page loading. You can do that with this simple one-liner:
+            </p>
+            <p class="code-block">
+                &lt;script src="charty.js" type="text/javascript" async&gt;&lt;/script&gt;
+            </p>
+            <p>
+                Now that we have Charty in our page, we can start with a really simple example. The first thing we'll do is simply add a point chart to our document and fill it with points from a csv file. This - once again - is a simple one-liner:
+            </p>
+            <p class="code-block">
+                    &lt;charty-pointchart src="data.csv"&gt;&lt;/charty-pointchart&gt;
+            </p>
+            <p>
+                Doesn't look that difficult, eh? With just two lines you can already create this nice looking result:
+            </p>
+            <charty-pointchart src="data.csv" id="chartychart"></charty-pointchart>
+        </section>
+        <section>
+            <h2>Adding Titles and Descriptions</h2>
+            <p>
+                For our next demo we're going to add a title and short description to our diagram. HTML 5 introduced two new semantic tags: figure and figcaption. You don't have to use these tags, but using them adds additional semantic information to your page, which is generally nice to have. If you wish to not use the figure or figcaption tag, you could for example put the charty tag inside a div container and then add a normal paragraph below it. However the figure and figcaption are a perfect fit for our purpose and therefore we're going to use them in this example.
+            </p>
+            <p class="code-block">
+                    &lt;figure&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Title!&lt;/h3&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;charty-pointchart src="data.csv"&gt;&lt;/charty-pointchart&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;figcaption&gt;Figure 1.01: description for this chart&lt;/figcaption&gt;<br>
+                    &lt;/figure&gt;
+            </p>
+            <figure>
+                    <h3>Title!</h3>
+                    <charty-pointchart src="data.csv"></charty-pointchart>
+                    <figcaption>Figure 1.01: description for this chart</figcaption>
+            </figure>
+        </section>
+        <footer>
+            <p>
+                As you see, using Charty for static charts is really simple. But Charty can easily handle more complex scenarios such as <a href="#">interactive charts</a>, or <a href="#">charts that display streaming data</a>. Follow the links to find out how to use Charty for that.
+            </p>
+        </footer>
     </body>
 </html>

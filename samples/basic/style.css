@@ -1,17 +1,22 @@
 body {
     font-family: 'Helvetica', Verdana, Geneva, Tahoma, sans-serif;
+    width: 960px;
+    margin:auto;
+    line-height: 1.5em;
+}
+
+figure {
+    margin:0px;
 }
 
 .code-block {
     font-family: 'Consolas', monospace;
-    padding: 5px;
+    padding: 10px 10px 10px 10px;
     background-color: #eee;
     border-radius: 5px;
-    display:inline-block;
+    display:block;
 }
 
-charty-linechart {
-    display: block;
-    height: 490px;
-    width: 600px;
+charty-pointchart {
+    height: 400px;
 }
