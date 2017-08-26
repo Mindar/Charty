@@ -48,7 +48,7 @@ export default class PointchartElement extends HTMLElement{
                     let xVal = rawData.axis[0].data[i];
                     let yVal = rawData.axis[1].data[i];
                     points.push({x: xVal, y: yVal});
-                    console.log(xVal + ', ' + yVal);
+                    //console.log(xVal + ', ' + yVal);
                 }
             }
 
